@@ -1,0 +1,8 @@
+opencv-python==4.9.0.80
+face-recognition
+firebase-admin
+cloudinary
+python-dotenv
+cvzone
+numpy==1.26.3
+requests
