@@ -9,12 +9,10 @@ import os
 from db import get_connection
 from config import ATTENDANCE_ELAPSED_MINUTES
 
-# ------------------- Configuration -------------------
 ENCODE_FILE = "EncodeFile.p"
 CSV_FILE = "students.csv"
 PHOTO_FILE = "./TEST/test_photo.jpg"
 
-# ------------------- Load Encodings -------------------
 if not os.path.exists(ENCODE_FILE):
     raise FileNotFoundError("EncodeFile2.p not found. Please run encoding script first.")
 
@@ -22,7 +20,6 @@ with open(ENCODE_FILE, "rb") as f:
     encodeListKnown, studentIds = pickle.load(f)
 print("Encodings loaded successfully.")
 
-# ------------------- Functions -------------------
 def get_student_info(student_id):
     """Fetch student info from DB, fallback to CSV."""
     try:
@@ -102,8 +99,6 @@ def update_attendance(student_id):
                 writer.writerows(rows)
     return updated_row, secondsElapsed
 
-
-# ------------------- Process Image -------------------
 img = cv2.imread(PHOTO_FILE)
 if img is None:
     print(f"⚠️ Could not read image: {PHOTO_FILE}")
