@@ -182,7 +182,7 @@ cython_debug/
 
 TEST/
 Resources/
-*.p
+EncodeFile.p
 .pickle
 
 Images/
@@ -192,3 +192,5 @@ myenv/
 Recent_Images/
 .env
 *.csv
+
+students.csv
