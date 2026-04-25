@@ -187,3 +187,8 @@ Resources/
 
 Images/
 Recent_Images/
+
+myenv/
+Recent_Images/
+.env
+*.csv
